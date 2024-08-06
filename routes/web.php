@@ -18,4 +18,4 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::post('/update-brand/{id}', [DemoController::class, 'DemoAction']);
+Route::post('/create-update-brand/{brandName}', [DemoController::class, 'DemoAction']);
