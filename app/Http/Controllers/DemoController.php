@@ -2,13 +2,13 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Brand;
+use App\Models\Product;
 use Illuminate\Http\Request;
 
 class DemoController extends Controller
 {
     public function DemoAction() {
-        return Brand::first();
-        // return Brand::find(4);
+        // return Product::pluck('price');
+        return Product::pluck('price', 'title');
     }
 }
