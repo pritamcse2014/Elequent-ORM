@@ -7,10 +7,8 @@ use Illuminate\Http\Request;
 
 class DemoController extends Controller
 {
-    public function DemoAction(Request $request) {
-        return Brand::updateOrCreate(
-            ['brandName' => $request->brandName],
-            $request->input()
-        );
+    public function DemoAction() {
+        // return Brand::get();
+        return Brand::all();
     }
 }
