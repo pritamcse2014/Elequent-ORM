@@ -8,8 +8,8 @@ use Illuminate\Http\Request;
 class DemoController extends Controller
 {
     public function DemoAction() {
-        return Product::groupBy('price')
-            ->having('price', '>', 2000)
+        return Product::skip(10)
+            ->take(2)
             ->get();
     }
 }
