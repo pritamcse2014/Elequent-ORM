@@ -8,11 +8,7 @@ use Illuminate\Http\Request;
 class DemoController extends Controller
 {
     public function DemoAction() {
-        return Product::where('price', '=', '2000')->get();
-        // return Product::where('price', '>', '2000')->get();
-        // return Product::where('price', '<', '2000')->get();
-        // return Product::where('price', '!=', '2000')->get();
-        // return Product::where('title', 'LIKE', '%CAR%')->get();
-        // return Product::where('title', 'NOT LIKE', '%CAR%')->get();
+        return Product::whereBetween('price', [2000, 5000])->get();
+        // return Product::whereNotBetween('price', [2000, 5000])->get();
     }
 }
