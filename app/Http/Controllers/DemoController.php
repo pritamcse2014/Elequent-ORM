@@ -8,8 +8,13 @@ use Illuminate\Http\Request;
 class DemoController extends Controller
 {
     public function DemoAction() {
-        return Product::skip(10)
-            ->take(2)
-            ->get();
+        // return Product::simplePaginate(5);
+        // return Product::paginate(5);
+        return Product::paginate(
+            $perPage = 10,
+            $columns = ['*'],
+            // $columns = ['title', 'price'],
+            $pageNumber = 'ItemNumber'
+        );
     }
 }
