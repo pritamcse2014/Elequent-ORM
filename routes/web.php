@@ -18,4 +18,4 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/order', [DemoController::class, 'DemoAction']);
+Route::get('/latest-oldest', [DemoController::class, 'DemoAction']);
