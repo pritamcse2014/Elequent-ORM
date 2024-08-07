@@ -18,4 +18,4 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/single-rows', [DemoController::class, 'DemoAction']);
+Route::get('/aggregation', [DemoController::class, 'DemoAction']);

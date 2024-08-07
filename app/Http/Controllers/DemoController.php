@@ -8,7 +8,10 @@ use Illuminate\Http\Request;
 class DemoController extends Controller
 {
     public function DemoAction() {
-        // return Product::pluck('price');
-        return Product::pluck('price', 'title');
+        // return Product::sum('price');
+        // return Product::avg('price');
+        return Product::count('price');
+        // return Product::max('price');
+        // return Product::min('price');
     }
 }
