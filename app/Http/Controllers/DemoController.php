@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 class DemoController extends Controller
 {
     public function DemoAction() {
-        // return Brand::get();
-        return Brand::all();
+        return Brand::first();
+        // return Brand::find(4);
     }
 }

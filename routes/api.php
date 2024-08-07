@@ -19,4 +19,4 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::get('/all-rows', [DemoController::class, 'DemoAction']);
+Route::get('/single-rows', [DemoController::class, 'DemoAction']);
